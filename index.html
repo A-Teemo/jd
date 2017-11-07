@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jd</title>
+  <link rel="stylesheet" href="./style-sheet.css" type="text/css">
+</head>
+<body>
+  <!-- 总体 -->
+<div class="quan">
+  <!-- 头部 -->
+  <div class="center">
+    <div class="logo">
+      <a href="http://www.jd.com" target="_blank"><img src="./logo.png"></a>
+      <span>欢迎登录</span>
+    </div>
+    <a class="a1" href="https://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans" target="_blank">登录页面，调查问卷</a>
+    <img class="dian1" src="./dian.png">
+  </div>
+<!-- 身体 -->
+ <div class="shen">
+   <div class="bei">
+     <div class="color"><!-- 背景颜色 -->
+       <div class="deng"><!-- 登录 -->
+         <div class="lu"><!-- 登录方式 -->
+           <div class="logo-tab1"><!-- 扫码登录 -->
+             <a href="#">扫码登录</a>
+           </div>
+           <span>|</span>
+            <div class="logo-tab2"><!-- 账户登录 -->
+             <a id=“ji” href="#">账户登录</a>
+           </div>
+         </div>
+         <div class="logoin-box1"><!-- 账户登录 登录的内容 -->
+           <div id="id1"><!-- 错误显示 -->
+             <div class="cu"><b></b><span></span></div>
+           </div>
+           <div class="mc"><!-- 输入信息 -->
+             <div class="entiy"><!-- 文本框 -->
+               <div class="logoin-div1"></div><!-- 图片 -->
+               <input type="text" name="user" placeholder="邮箱/用户名/已验证手机">
+             </div>
+              <div class="entiy"><!-- 文本框 -->
+               <div class="logoin-div2"></div><!-- 图片 -->
+               <input type="password" name="password" placeholder="密码">
+             </div>
+             <div class="safe"> <!-- 忘记密码 -->
+               <a href="https://safe.jd.com/findPwd/index.action">忘记密码</a>
+             </div>
+             <div class="bin">
+               <button>登录</button>
+             </div>
+           </div>
+         </div>
+         <div class="logoin-box2"><!-- 扫码登录 登录的内容 -->
+           <div class="rwm">
+             <img src="./rwm.png">
+           </div><!-- 二维码 -->
+           <div class="sao">
+             <span> 打开 <a href="http://app.jd.com/" target="_blank">手机京东</a>&nbsp;&nbsp;&nbsp;&nbsp;扫描二维码</span>
+           </div><!-- 手机京东 -->
+           <div class="nei"><!-- 更快更安全 -->
+             <ul>
+                <li><b></b><em>免输入</em></li>
+                <li><b class="faster"></b><em>更快</em></li>
+                <li><b class="more-safe"></b><em>更安全</em></li>
+                </ul>
+           </div>
+         </div>
+         <div class="coagent"> <!-- 登录内容的尾部 -->
+           <ul>
+                  <li>
+                  <a href="#"><b class="QQ-icon"></b><span>QQ</span></a>
+                  <span class="line">|</span>
+                  </li>
+                  <li>
+                 <a href="#"><b class="weixin-icon"></b><span>微信</span></a>
+								 </li>
+                  <li class="extra-r">
+                    <b></b>
+                  <a href="https://reg.jd.com/reg/person?ReturnUrl=http%3A%2F%2Fwww.jd.com" target="_blank">立即注册</a>
+              </li>
+            </ul>
+         </div>
+       </div>
+       <div class="center"><!-- 背景图片 -->
+         <img src="./bei.jpg">
+       </div>
+     </div>
+   </div>
+ </div>
+<!-- 尾部 -->
+<div class="bottom1">
+  <!-- 结尾 -->
+ <div class="center">
+   <div>
+               <a rel="nofollow" target="_blank" href="http://www.jd.com/intro/about.aspx">
+                   关于我们
+               </a>
+               |
+               <a rel="nofollow" target="_blank" href="http://www.jd.com/contact/">
+                   联系我们
+               </a>
+               |
+               <a rel="nofollow" target="_blank" href="http://zhaopin.jd.com/">
+                   人才招聘
+               </a>
+               |
+               <a rel="nofollow" target="_blank" href="http://www.jd.com/contact/joinin.aspx">
+                   商家入驻
+               </a>
+               |
+               <a rel="nofollow" target="_blank" href="http://www.jd.com/intro/service.aspx">
+                   广告服务
+               </a>
+               |
+               <a rel="nofollow" target="_blank" href="http://app.jd.com/">
+                   手机京东
+               </a>
+               |
+               <a target="_blank" href="http://club.jd.com/links.aspx">
+                   友情链接
+               </a>
+               |
+               <a target="_blank" href="http://media.jd.com/">
+                   销售联盟
+               </a>
+               |
+               <a href="//club.jd.com/" target="_blank">
+                   京东社区
+               </a>
+               |
+               <a href="//gongyi.jd.com" target="_blank">
+                   京东公益
+               </a>
+               |
+               <a target="_blank" href="//en.jd.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+             </div>
+             <div class="copyright">
+                        Copyright&nbsp;©&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+                    </div>
+            </div>
+ </div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(".logo-tab1,.logo-tab2").addClass("logo-tab");
+  $(".logoin-div1,.logoin-div2").addClass("logoin-div");
+  $(".logoin-box1,.logoin-box2").addClass("logoin-box");
+  $(function(){//默认显示扫码登录
+    $(".logo-tab2 a").addClass("test1");
+    $(".logoin-box1").show();
+    $(".logoin-box2").hide();
+  });
+  $(function(){
+    // 单击改变精灵图
+    $(".entiy input:eq(0)").on("focus",function(){
+      $(".logoin-div1").addClass("tou")
+      }).on("blur",function(){
+        $(".logoin-div1").removeClass("tou").addClass(".logoin-div1")
+      });
+      $(".entiy input:eq(1)").on("focus",function(){
+        $(".logoin-div2").addClass("mima")
+      }).on("blur",function(){
+        $(".logoin-div2").removeClass("mima").addClass(".logoin-div2")
+      });
+      // 单击改变登录样式
+      $(".logo-tab1 a").click(function(){
+        $(this).removeClass("test2").addClass("test1");
+        $(".logo-tab2 a").removeClass("test1").addClass("test2");
+        $(".logoin-box2").show();
+        $(".logoin-box1").hide();
+      });
+        $(".logo-tab2 a").click(function(){
+          $(this).removeClass("test2").addClass("test1");
+          $(".logo-tab1 a").removeClass("test1").addClass("test2");
+          $(".logoin-box1").show();
+          $(".logoin-box2").hide();
+      });
+      // //鼠标悬浮增加图片
+      // $(".rwm").on("mouseenter",function(){
+      //   $(".rwm img").after("<img src='./phone.png'>");
+      // }).on("mouseleave",function(){
+      //   $(".rwm img").eq(1).remove();
+      // });
+      //登录验证
+      $(".bin button").click(function(){
+        var user=$("input[name=user]").val();
+        var password=$("input[name=password]").val();
+        if(!user){
+          $("#id1 .cu span").eq(0).remove();
+          $("#id1 .cu").addClass("wrong").
+          append("<span>请输入账户名和密码</span>").
+          css("visibility","visible");
+          return false;
+        }else if (!password) {
+          $("#id1 .cu span").eq(0).remove();
+          $("#id1 .cu").addClass("wrong").
+          append("<span>请输入密码</span>").
+          css("visibility","visible");
+          $(".entiy input").eq(1).focus();
+        }else if(user== "lisi" && password==="123"){
+          alert("登录成功");
+          location.href="https://www.jd.com/";
+        }else{
+          $("#id1 .cu span").eq(0).remove();
+          $("#id1 .cu").addClass("wrong").
+          append("<span>帐号或者密码不匹配</span>").
+          css("visibility","visible");
+          $(".entiy input").eq(1).val("").focus();
+        }
+      });
+  });
+</script>
+</div>
+</body>
+</html>

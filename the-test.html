@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>考试</title>
+  <style>
+  a,body, center, dd, del, div, dl, dt, em,i,button, input, textarea,
+  font, form, h1, h2, h3, h4, h5, h6, html,
+  img, li, ol, p, span, strong, u, ul{
+    margin: 0px;
+    padding:0px;
+  }
+  .xian{
+    visibility:visible;
+  }
+  .cang{
+    visibility:hidden;
+  }
+  </style>
+</head>
+<body>
+  <div id="id1">请输入帐号密码</div>
+  用户名：<input type="text" name="user"><br/>
+  密码：<input type="password" name="pass"><br/>
+  <button id="bit">登录</button>
+  <script src="./jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("input")
+    $("#bit").click(function(){//单击登录的时候触发
+      var user=$("input[name=user]").val();//获取user文本框的值
+      var passwd=$("input[name=pass]").val();//获取pass文本框的值
+      if((!user) || (!passwd)){//判断帐号密码是否为空
+        $("#id1").addClass("xian");
+        return false;
+      }
+      $.ajax({
+        method:"post",//post方式提交
+        url:"/the-test",//URL地址
+        data:{"user":user,"pass":passwd},//将数据传入后台
+        success:function(data,textStatus,jqXHR){ //后台返回数据daba=req.body
+          if(data.name ===“zhangsan” && data.pass ==="123"){
+            alert("登录成功！");
+          }
+        },
+        error:function(jqXHR,textStatus,errorThrow){//失败
+          console.log(textStatus,errorThrow);
+        }
+      });
+    });
+  })
+  </script>
+</body>
+</html>
